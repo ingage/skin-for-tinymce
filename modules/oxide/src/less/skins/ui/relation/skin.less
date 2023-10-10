@@ -1,5 +1,61 @@
 @import 'src/less/theme/theme';
 
-//
-// Place your variables here
-//
+// Vuetify同等の(ただし、使う分だけの)色変数を定義する。
+@grey-darken-2: #616161;
+@grey-lighten-2: #e0e0e0;
+@grey-lighten-3: #eeeeee;
+@grey-lighten-5: #fafafa;
+
+// globals/global-variables.less
+@background-color: @grey-lighten-5;
+
+// components/editor/editor.less
+@editor-header-border: 1px solid @grey-lighten-2;
+@editor-header-box-shadow: none;
+
+// components/toolbar/toolbar.less
+@toolbar-padding-x: 12px;
+@toolbar-padding-y: 4px;
+@toolbar-separator-distance: 4px;
+
+// components/toolbar/toolbar-group.less
+@toolbar-group-spacing-y: 0;
+@toolbar-group-separator-color: @grey-lighten-2;
+
+// components/toolbar-button/toolbar-button.less
+@toolbar-button-font-size: 12px; // text-body-2相当
+@toolbar-button-height: 24px;
+@toolbar-button-icon-color: @grey-darken-2;
+@toolbar-button-spacing-x: 4px;
+@toolbar-button-spacing-y: 2px;
+@toolbar-button-text-color: @grey-darken-2;
+@toolbar-button-width: 24px;
+@toolbar-button-hover-background-color: @grey-lighten-3;
+@toolbar-button-enabled-background-color: @grey-lighten-2;
+@toolbar-button-disabled-icon-color: @grey-lighten-2;
+
+// components/toolbar-button/toolbar-select-button.less
+@toolbar-button-bespoke-background-color: @toolbar-background-color;
+
+.tox {
+  // ツールバーのpadding-left: 12px相当の確保
+  .tox-menubar + .tox-toolbar-overlord {
+    margin-left: 4px;
+  }
+
+  // ツールバー内のボタンのスペーシングをなんとかする
+  .tox-tbtn {
+    margin: 0 4px 0 4px;
+  }
+
+  // ツールバー内のボタンのスペーシングをなんとかする
+  .tox-toolbar__group {
+    padding: 0 8px 0 4px;
+  }
+
+  // フォントサイズ選択欄の幅を修正する
+  // XXX ほかにselectが追加され、順番が変わった場合はこのままでは動かないので注意！
+  .tox-tbtn--select:first-child {
+    width: 126px;
+  }
+}
