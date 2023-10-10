@@ -36,8 +36,40 @@
     </textarea>
 
     <script>
-        const skin = localStorage.getItem('skin') || 'default';
-        const contentcss = localStorage.getItem('contentcss') || 'default';
+        const skin = localStorage.getItem('skin') || 'relation';
+        const contentcss = localStorage.getItem('contentcss') || 'relation';
+
+        const font_size_formats = [
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          36,
+          48,
+          72,
+        ].map(fontSize => `${fontSize}px`).join(' ');
+
+        const toolbar = [
+          'undo redo',
+          // TODO: 多分プラグインが有効でないせいで、動かない
+          //'fontsize',
+          'formatselect',
+          'bold italic underline strikethrough',
+          'removeformat',
+          'forecolor backcolor',
+          'blockquote',
+          'link unlink',
+          'image',
+        ].join(' | ');
 
         tinymce.init({
             selector:'textarea',
@@ -46,7 +78,9 @@
               'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime', 'media', 'nonbreaking',
               'save', 'table', 'directionality', 'emoticons', 'importcss', 'codesample', 'help'
             ],
-            toolbar: 'undo redo | formatselect | bold italic strikethrough forecolor backcolor blockquote | fontfamily fontsizeinput | link table image media | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat fullscreen',
+            toolbar,
+            font_size_formats,
+            placeholder: 'メッセージを入力してください',
             toolbar_mode: 'floating',
             toolbar_sticky: true,
             height: 600,
