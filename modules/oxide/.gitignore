@@ -7,6 +7,7 @@
 /dist
 /scratch
 /gen
+/build/index.html
 /build/skins/content/*
 !/build/skins/content/relation/
 /build/skins/ui/*
