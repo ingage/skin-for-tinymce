@@ -3761,7 +3761,7 @@ body.tox-dialog__disable-scroll {
   display: flex;
   flex: 1;
 }
-.tox .tox-menubar + .tox-toolbar-overlord {
+.tox .tox-toolbar-overlord {
   margin-left: 4px;
 }
 .tox .tox-tbtn {
