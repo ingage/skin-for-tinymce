@@ -3317,7 +3317,7 @@ body.tox-dialog__disable-scroll {
   flex: 0 0 auto;
   flex-shrink: 0;
   flex-wrap: wrap;
-  padding: 0 1px;
+  padding: 0 5px;
   transform: perspective(1px);
 }
 .tox .tox-toolbar-overlord > .tox-toolbar,
@@ -3768,7 +3768,7 @@ body.tox-dialog__disable-scroll {
   margin: 0 4px 0 4px;
 }
 .tox .tox-toolbar__group {
-  padding: 0 8px 0 4px;
+  padding: 0 6px 0 6px;
 }
 .tox .tox-tbtn--select:first-child {
   width: 126px;
