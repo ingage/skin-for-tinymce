@@ -14,6 +14,8 @@
 
 `yarn oxide-start`はビルドしたファイルをそのまま出力しているので、コミット・pushすればよい。
 
+また`package.json`の`version`も更新すること。URLのハッシュが変わっているだけでは`yarn install`時に無視されるようなので必要。
+
 一応`yarn oxide-build`で明示的にビルドすることも可能。
 
 pushしてマージした後は、もちろん使用する側で見るバージョンを更新する。`yarn add`し直さないと駄目…。
