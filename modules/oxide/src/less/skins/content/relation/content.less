@@ -64,10 +64,14 @@ code {
   padding: .1rem .2rem;
 }
 
+blockquote {
+  margin: 0;
+}
+
 .mce-content-body:not([dir=rtl]) {
   blockquote {
     border-left: 2px solid #ccc;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     padding-left: 1rem;
   }
 }
@@ -76,7 +80,7 @@ code {
 .mce-content-body[dir=rtl] {
   blockquote {
     border-right: 2px solid #ccc;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     padding-right: 1rem;
   }
 }
@@ -84,4 +88,9 @@ code {
 // XXX content.lessでは変数を設定しても無意味のようなので、直接
 .mce-content-body[data-mce-placeholder]:not(.mce-visualblocks)::before {
   color: #bdbdbd;
+}
+
+// ckeditorと同様にpタグにmarginを設定しない
+p {
+  margin: 0;
 }
