@@ -1,5 +1,5 @@
 body {
-  font-family: "Noto Sans", "Noto Sans CJK JP", "Helvetica Neue", helvetica, arial, "メイリオ", "Meiryo UI", meiryo, "游ゴシック", "Yu Gothic", yugothic, "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "Noto Sans", "Noto Sans CJK JP", "Helvetica Neue", helvetica, arial, "メイリオ", "Meiryo UI", meiryo, "游ゴシック", "Yu Gothic", yugothic, "Hiragino Kaku Gothic ProN", sans-serif !important;
   font-size: 14px;
   line-height: 1.57;
   margin: 16px;
@@ -71,4 +71,7 @@ p {
 }
 a {
   color: #0277bd;
+}
+pre {
+  font-family: "Noto Sans", "Noto Sans CJK JP", "Helvetica Neue", helvetica, arial, "メイリオ", "Meiryo UI", meiryo, "游ゴシック", "Yu Gothic", yugothic, "Hiragino Kaku Gothic ProN", sans-serif;
 }
